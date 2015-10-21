@@ -1,4 +1,4 @@
-CREATE USER 'trucker1'@'localhost.localdomain' IDENTIFIED BY 'trucker';
+CREATE USER 'trucker1'@'localhost' IDENTIFIED BY 'trucker';
 
 GRANT ALL PRIVILEGES ON *.* TO 'trucker1'@'localhost' WITH GRANT OPTION;
 
@@ -6,12 +6,16 @@ CREATE USER 'trucker1'@'%' IDENTIFIED BY 'trucker';
 
 GRANT ALL PRIVILEGES ON *.* TO 'trucker1'@'%' WITH GRANT OPTION;
 
+-- CREATE USER 'trucker1'@'%' IDENTIFIED BY 'trucker';
+
+-- GRANT ALL PRIVILEGES ON *.* TO 'trucker1'@'%' WITH GRANT OPTION;
+
 /* This the the Drivers */
 CREATE TABLE DRIVERS (
 DRIVER_ID  VARCHAR(200) NOT NULL,
 DRIVER_NAME VARCHAR(1000) NOT NULL,
 CERTIFIED VARCHAR(10) NOT NULL,
-WAGE_PLAN VARCHAR(10) NOT NULL); 
+WAGE_PLAN VARCHAR(10) NOT NULL);
 
 /* This is the TimeSheet */
 CREATE TABLE TIMESHEET(
